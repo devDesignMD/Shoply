@@ -6,6 +6,6 @@ import {PartnersComponent} from "../partners/partners.component";
 @NgModule({
   declarations: [ HeroComponent,PartnersComponent],
   imports: [CommonModule],
-  exports: [ HeroComponent],
+  exports: [ HeroComponent, PartnersComponent],
 })
 export class HomeComponentsModule {}
