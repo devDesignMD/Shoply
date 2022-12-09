@@ -7,8 +7,7 @@ import {RouterOutlet} from "@angular/router";
   selector: 'app-default',
   standalone: true,
   imports: [CommonModule, LayoutComponentsModule, RouterOutlet],
-  templateUrl: './default.component.html',
-  styleUrls: ['./default.component.css']
+  templateUrl: './default.component.html'
 })
 export class DefaultComponent implements OnInit {
 
