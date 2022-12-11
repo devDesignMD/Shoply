@@ -1,18 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BaseModule } from '../../components/base/base.module';
+import { FormInputComponent } from '../../components/base/form-input/form-input.component';
+import { PageRoutes } from '../../ts/enum';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BaseModule, FormInputComponent],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  get forgotPasswordUrl(): string {
+    return PageRoutes.ForgotPassword;
 
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {}
+
+  login(): void {
+    console.log('login');
+  }
 }

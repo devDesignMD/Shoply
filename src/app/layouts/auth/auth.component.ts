@@ -7,8 +7,7 @@ import {LayoutComponentsModule} from "../../components/layout-components/layout-
   selector: 'app-auth',
   standalone: true,
   imports: [CommonModule, RouterOutlet, LayoutComponentsModule],
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  templateUrl: './auth.component.html'
 })
 export class AuthComponent implements OnInit {
 
