@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { LinkInterface } from '../../../ts/interfaces';
 
 @Component({
-  selector: 'app-breadcrump',
+  selector: 'Breadcrumb',
   templateUrl: './breadcrump.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class BreadcrumpComponent implements OnInit {
+  @Input() items: LinkInterface[] = [];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
