@@ -5,6 +5,7 @@ import { ProductSearchComponent } from './product-search/product-search.componen
 import { ListComponent } from './list/list.component';
 import { ProductSortComponent } from './product-sort/product-sort.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import {RouterModule} from "@angular/router";
 
 
 
@@ -17,7 +18,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     ProductCardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     ProductFilterComponent,

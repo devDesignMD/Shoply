@@ -1,3 +1,5 @@
 export enum ApiRoutes {
-  Login = '/login'
+  Login = '/auth/login',
+  Logout = '/auth/logout',
+  Products = '/products',
 }

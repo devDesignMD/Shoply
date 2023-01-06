@@ -1,4 +1,6 @@
-<div class="fixed to-0 left-0 z-30 flex items-center justify-center w-full bg-primary-300 h-[115px]">
+<div
+  class="fixed to-0 left-0 z-30 flex items-center justify-center w-full bg-primary-300 h-[115px]"
+>
   <div class="w-full flex items-center justify-between max-w-7xl">
     <div class="text-3xl leading=9 font-bold">Shoply.</div>
     <div class="flex items-center justify-between max-w-[427px] w-full">
@@ -12,12 +14,31 @@
         {{ link.text }}
       </div>
     </div>
-    <div class="flex items-center ">
+    <div class="flex items-center">
       <button [routerLink]="cartUrl" class="mr-16 relative">
-        <img src="assets/icons/cart.png" alt="cart">
-        <div class="absolute -top-1 -right-3 h-4 w-4 rounded-full bg-red-500 text-white text-sm flex items-center justify-center">0</div>
+        <img src="assets/icons/cart.png" alt="cart" />
+        <div
+          class="absolute -top-1 -right-3 h-4 w-4 rounded-full bg-red-500 text-white text-sm flex items-center justify-center"
+        >
+          0
+        </div>
       </button>
-      <button [routerLink]="loginUrl" class="w-[113px] bg-primary-900 text-white h-10">Login</button>
+      <button
+        *ngIf="showLoginBtn; else user"
+        [routerLink]="loginUrl"
+        class="w-[113px] bg-primary-900 text-white h-10"
+      >
+        Login
+      </button>
+      <ng-template #user>
+        <span>{{ userName }}</span>
+        <button
+          class="ml-4 w-[113px] bg-primary-900 text-white h-10"
+          (click)="(logout)"
+        >
+          Logout
+        </button>
+      </ng-template>
     </div>
   </div>
 </div>

@@ -20,8 +20,12 @@ export class FormInputComponent implements OnInit {
     return this.control.errors
   }
 
-  get errorMessage(): any[] {
+  get errorMessage(): string {
     const messages = [];
+
+    if (!this.errors){
+      return ''
+    }
 
   if (this.errors.hasOwnProperty( 'required')){
     messages.push('This is required field')
@@ -29,9 +33,19 @@ export class FormInputComponent implements OnInit {
     if (this.errors.hasOwnProperty( 'email')){
       messages.push('Invalid email format')
     }
+    if (this.errors.hasOwnProperty( 'minlength')){
+      messages.push(`Minimal length is ${this.errors.minlength.requiredLength} (${this.errors.minlength.actalLength})`)
+    }
+    if (this.errors.hasOwnProperty( 'maxlength')){
+      messages.push(`Maximal length is ${this.errors.maxlength.requiredLength} (${this.errors.maxlength.actalLength})`)
+    }
 
-  return messages
+
+    return messages.join(', ')
   }
 
+  get areMessageShown(): boolean {
+    return this.control.touched || this.control.dirty
+  }
   ngOnInit(): void {}
 }
