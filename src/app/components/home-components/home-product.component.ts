@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductInterface } from '../../../ts/interfaces';
+import { ProductInterface } from '../../ts/interfaces';
+import {PageRoutes} from "../../ts/enum";
+
 
 @Component({
   selector: 'HomeProduct',
-  templateUrl: './home-product.component.html',
+  templateUrl: './home-product/home-product.component.html',
   styles: [],
 })
 export class HomeProductComponent implements OnInit {
@@ -41,6 +43,10 @@ export class HomeProductComponent implements OnInit {
       imageUrl: 'assets/images/product-8.png',
     },
   ];
+
+  get productUrl(): string {
+    return `${PageRoutes.Products}`;
+  }
 
   constructor() {}
 

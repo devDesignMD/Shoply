@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HomeComponentsModule} from "../../components/home-components/home-components.module";
+import {HomeComponentsModule} from "../../components/home-components/home-product/home-components.module";
 
 @Component({
   selector: 'app-home',
