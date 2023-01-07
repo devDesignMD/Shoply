@@ -1,6 +1,6 @@
 <section class="flex items-center justify-center px-[76px] py-9 mb-[125px]">
   <div class="max-w-7xl w-full mt-9 h-full">
-    <div class="w-full mb-[50px]">
+    <div class="w-full mb-[50px] cursor-pointer">
       <Breadcrumb [items]="breadcrumb"></Breadcrumb>
     </div>
     <div class="flex w-full">
@@ -42,10 +42,8 @@
             <img src="assets/icons/cart-2.png" alt="" />
           </div>
         </div>
-        <div class=" flex items-center justify-end mt-[95px] ">
-          <div
-            class="px-[59px] py-0 bg-[#F8F8F8]"
-          >
+        <div class="flex items-center justify-end mt-[95px]">
+          <div class="px-[59px] py-0 bg-[#F8F8F8]">
             <table class="w-[350px]">
               <tr class="font-bold">
                 <td>Subtotal</td>
@@ -64,6 +62,10 @@
               </tr>
             </table>
           </div>
+        </div>
+        <div class="mt-[20px] flex items-center justify-end">
+          <button class="w-[131px] h-[50px] border border-[#393D45]">Close</button>
+          <button class="w-[131px] h-[50px] bg-[#393D45] text-gray-100 ml-6">Check out</button>
         </div>
       </div>
     </div>
