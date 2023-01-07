@@ -22,7 +22,7 @@ export class ProductsListComponent implements OnInit {
     },
     {
       to: PageRoutes.Products,
-      text: 'Product',
+      text: 'Products',
     },
   ];
 

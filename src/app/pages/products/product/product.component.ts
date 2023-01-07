@@ -20,7 +20,7 @@ export class ProductComponent implements OnInit {
     },
     {
       to: PageRoutes.Products,
-      text: 'Product',
+      text: 'Products',
     },
     {
       to: `${PageRoutes.Products}/${this.productId}`,
